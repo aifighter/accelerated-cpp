@@ -16,9 +16,7 @@ int main() {
     Student_info record;
     string::size_type maxlen = 0;
 
-    while (record.name != "end") {
-        cout << "Input name, midterm, final, homework (end with string end): ";
-        read(cin, record);
+    while (read(cin, record)) {
         maxlen = max(maxlen, record.name.size());
         students.push_back(record);
     }
